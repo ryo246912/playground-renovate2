@@ -1,0 +1,25 @@
+name: tagpr
+
+on:
+  push:
+    branches: ['ci']
+
+permissions:
+  pull-requests: write
+  issues: write
+  contents: write
+  actions: read
+
+jobs:
+  tagpr:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Create Tag PR
+        uses: Songmu/tagpr@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Send Slack Notification If Failed
+        uses: 8398a7/action-slack@v3.16.1
+        with:
+          status: ${{ job.status }}
