@@ -3,6 +3,9 @@
   "extends": ["config:recommended"],
   "schedule": ["* 9-18 * * 1-5"],
   "timezone": "Asia/Tokyo",
+  "major": {
+    "enabled": false
+  },
   "packageRules": [
     {
       "matchUpdateTypes": ["patch"],
