@@ -4,6 +4,7 @@
   "schedule": ["* 9-18 * * 1-5"],
   "timezone": "Asia/Tokyo",
   "major": {
+    // コメント追加
     "dependencyDashboardApproval": true
   },
   "packageRules": [
