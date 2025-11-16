@@ -20,6 +20,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Send Slack Notification If Failed
-        uses: 8398a7/action-slack@v3.16.1
+        uses: 8398a7/action-slack@v3.19.0
         with:
           status: ${{ job.status }}
